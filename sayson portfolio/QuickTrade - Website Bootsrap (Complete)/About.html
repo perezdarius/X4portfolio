@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuickTrade - About Us</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <a class="navbar-brand" href="index.html">QuickTrade</a>
+
+  <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="menu">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="Marketplace.html">Marketplace</a></li>
+      <li class="nav-item"><a class="nav-link" href="About.html">About Us</a></li>
+    </ul>
+
+    <div class="ms-auto d-flex">
+      <div class="container">
+        <a href="Sell.html" class="btn btn-join rounded-pill px-3 py-1">Sell Item</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="about py-5"
+style="
+background-color: rgba(0, 0, 0, 0.5);
+border: 2px solid #FFD700;
+border-radius: 8px;
+padding: 60px 30px;">
+
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+
+    <div class="col-lg-6 text-center" style="color: white;">
+      <h1>About QuickTrade</h1>
+
+      <h2>Who We Are:</h2>
+      <p>
+        Quick Trade is an online thrifting marketplace designed to make buying and selling preloved fashion simple and enjoyable.
+        We connect local sellers and buyers to create a community where fashion gets a second life.
+      </p>
+
+      <h2>Mission:</h2>
+      <p>
+        Our mission is to provide a sustainable alternative to fast fashion by giving clothing a new purpose and helping people discover unique styles at affordable prices.
+      </p>
+
+      <h4>Why Choose QuickTrade?</h4>
+      <ul class="text-start">
+        <li>Safe and easy transactions</li>
+        <li>Support local sellers</li>
+        <li>Discover unique, rare items</li>
+        <li>By buying pre-loved items, you're contributing to reduce wastes in landfills.</li>
+      </ul>
+
+    </div>
+
+  </div>
+</div>
+
+</section>
+<!-- About Content -->
+
+    
+
+      
+      <!-- Text Column -->
+     
+
+<!-- Team Section -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2>Meet Our Team</h2>
+    <p class="mb-5" style="color: white;">Passionate about fashion, sustainability, and connecting communities.</p>
+    <div class="row justify-content-center">
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm fade-in">
+          <img src="mape.jpg" class="card-img-top" alt="Axl Rose">
+          <div class="card-body">
+            <h5 class="card-title">Axl Rose Mape</h5>
+            <p class="card-text">Founder & CEO</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm fade-in">
+          <img src="gordola.jpg" class="card-img-top" alt="Karmella Gordola">
+          <div class="card-body">
+            <h5 class="card-title">Karmela Louise Gordola</h5>
+            <p class="card-text">Head of Operations</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-3 text-center">
+  <p>© 2026 QuickTrade</p>
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOnScroll = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+faders.forEach(el => appearOnScroll.observe(el));
+
+</script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

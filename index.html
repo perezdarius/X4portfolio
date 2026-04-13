@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X4 | BSIT 2-1</title>
+    <link rel="stylesheet" href="in.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center brand-area" href="index.html">
+          <img src="sow.png" class="logo" />
+          <span class="brand-item ms-2">BSIT 2-1</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+             <button id="darkToggle" class="btn btn-outline-dark btn-custom py-2 px-3">
+                   <i class="fa-solid fa-moon me-2"></i>Dark Mode
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="main-header d-flex align-items-center justify-content-center">
+      <div class="text-center header-content">
+        <h1 class="display-1 fw-bolder text-white x4-title">X4</h1>
+        <p class="dept-text">BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</p>
+        <div class="header-line"></div>   
+           <p2 class="dept-text">
+             A friendly interactive site designed by our team to highlight the technical skills and portfolios. By uniting our skills in development, design, and analysis, we created this core domain to represent our collective progress.
+      </div>
+      
+    </header>
+
+    <section class="container my-5 index-page">
+      <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-center">
+        <div class="col d-flex flex-column align-items-center member-container">
+          <span class="member-role">Leader</span>
+          <a href="Frades_Portfolio/index.html" class="member-link">
+            <div class="big-circle"><img src="fra.png" /></div>
+          </a>
+          <p class="member-name">ALDRIN FRADES</p>
+        </div>
+
+        <div class="col d-flex flex-column align-items-center member-container">
+          <span class="member-role">Lead Developer</span>
+          <a href="OSEO_JOSH/index.html" class="member-link">
+            <div class="big-circle"><img src="bil.png" /></div>
+          </a>
+          <p class="member-name">BILLY JOSH OSEO</p>
+        </div>
+
+        <div class="col d-flex flex-column align-items-center member-container">
+          <span class="member-role">UI/UX Designer</span>
+          <a href="anuran_portfolio/index.html" class="member-link">
+            <div class="big-circle"><img src="anu.png" /></div>
+          </a>
+          <p class="member-name">CLARK DEVON ANURAN</p>
+        </div>
+
+        <div class="col d-flex flex-column align-items-center member-container">
+          <span class="member-role">System Analyst</span>
+          <a href="Lacra Portfolio/index.html" class="member-link">
+            <div class="big-circle"><img src="la.png" /></div>
+          </a>
+          <p class="member-name">CHRISTIAN NHEL LACRA</p>
+        </div>
+
+        <div class="col d-flex flex-column align-items-center member-container">
+          <span class="member-role">Programmer</span>
+          <a href="sayson portfolio/index.html" class="member-link">
+            <div class="big-circle"><img src="say.png" /></div>
+          </a>
+          <p class="member-name">JOHNMARTIN SAYSON</p>
+        </div>
+
+        <div class="col d-flex flex-column align-items-center member-container">
+          <span class="member-role">System Developer</span>
+          <a href="Perez_Portfolio/index.html" class="member-link">
+            <div class="big-circle"><img src="pogii.png" /></div>
+          </a>
+          <p class="member-name">DARIUS PEREZ</p>
+        </div>
+
+        <div class="col d-flex flex-column align-items-center member-container">
+          <span class="member-role">Documentation</span>
+          <a href="Holaso_Portfolio/index.html" class="member-link">
+            <div class="big-circle"><img src="ho.png" /></div>
+          </a>
+          <p class="member-name">JEZIEL HOLASO</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center custom-footer py-4">
+      <p class="mb-0">© 2026 Bachelor of Science in Information Technology</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const darkToggle = document.getElementById('darkToggle');
+
+darkToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    if(document.body.classList.contains('dark-mode')) {
+        document.body.classList.remove('bg-light');
+        darkToggle.innerHTML = '<i class="fa-solid fa-sun me-2"></i>Light Mode';
+        
+        darkToggle.classList.remove('btn-outline-dark');
+        darkToggle.classList.add('btn-primary'); 
+    } else {
+        document.body.classList.add('bg-light');
+        darkToggle.innerHTML = '<i class="fa-solid fa-moon me-2"></i>Dark Mode';
+        
+        darkToggle.classList.remove('btn-primary');
+        darkToggle.classList.add('btn-outline-dark');
+    }
+});
+      const circles = document.querySelectorAll(".big-circle");
+
+      circles.forEach((circle) => {
+        circle.addEventListener("click", function (e) {
+          circles.forEach((c) => c.classList.remove("active-move"));
+          this.classList.add("active-move");
+        });
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest(".big-circle")) {
+          circles.forEach((c) => c.classList.remove("active-move"));
+        }
+      });
+    </script>
+  </body>
+</html>

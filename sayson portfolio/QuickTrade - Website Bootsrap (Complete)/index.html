@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quick Trade</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<a class="navbar-brand" href="#">QuickTrade</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="Marketplace.html">Marketplace</a></li>
+<li class="nav-item"><a class="nav-link" href="About.html">About Us</a></li>
+</ul>
+
+<div class="ms-auto d-flex">
+<div class="container">
+<a href="Sell.html" class="btn btn-join rounded-pill px-3 py-1">Sell Item</a>
+</div>
+</div>
+
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+<div>
+<h1>Discover hidden gems</h1>
+<p>Preloved, but never out of style</p>
+<a href="Marketplace.html" class="btn btn-warning btn-lg">Browse Listings</a>
+</div>
+</section>
+
+<!-- Marketplace Listings -->
+<section id="menu-section" class="menu-section">
+<div class="container mt-5">
+
+<h2 class="text-center mb-4">Latest Listings</h2>
+
+<div class="slider-wrapper">
+
+<button class="slide-btn left" onclick="prevProduct()">❮</button>
+
+<div class="slider-window">
+<div class="coffee-slider" id="coffeeSlider">
+
+<!-- ITEM 1 -->
+<div class="card product-card shadow fade-in">
+<img src="adidas_shoe.jpg" class="card-img-top" alt="adidas_lego_shoe">
+<div class="card-body text-center">
+<h5 class="card-title">Adidas x Lego v7000 Limited Edition</h5>
+<h6 style="font-weight: bold;">₱2,500</h6>
+<p class="card-text">
+Condition: Good <br>
+Seller: Marco <br>
+Location: Quezon City
+</p>
+</div>
+</div>
+
+<!-- ITEM 2 -->
+<div class="card product-card shadow fade-in">
+<img src="nike_windrunner.webp" class="card-img-top" alt="nike_windrunner">
+<div class="card-body text-center">
+<h5 class="card-title">Nike Special Edition Windrunner</h5>
+<h6 style="font-weight: bold;">₱699</h6>
+<p class="card-text">
+Condition: Like New <br>
+Seller: Angela <br>
+Location: Manila
+</p>
+</div>
+</div>
+
+<!-- ITEM 3 -->
+<div class="card product-card shadow fade-in">
+
+<img src="adidas_windbreaker.webp" class="card-img-top" alt="vintage_adidas_windbreaker">
+<div class="card-body text-center">
+<h5 class="card-title">Vintage 90's Adidas Windbreaker</h5>
+<h6 style="font-weight: bold;">₱450</h6>
+<p class="card-text">
+Condition: Used <br>
+Seller: Kevin <br>
+Location: Pasig
+</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<button class="slide-btn right" onclick="nextProduct()">❯</button>
+
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="container text-center py-5">
+<h2>Contact Us</h2>
+<p>Email: Quick.Trade@gmail.com</p>
+<p>Phone: 0930 535 1398</p>
+</section>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 QuickTrade</p>
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+let currentIndex = 0;
+const slider = document.getElementById("coffeeSlider");
+const cards = document.querySelectorAll(".product-card");
+const faders = document.querySelectorAll(".fade-in");
+
+function updateSlider(){
+slider.style.transform = "translateX(-" + (currentIndex * 300) + "px)";
+}
+
+function nextProduct(){
+currentIndex++;
+
+if(currentIndex >= cards.length){
+currentIndex = 0;
+}
+
+updateSlider();
+}
+
+function prevProduct(){
+currentIndex--;
+
+if(currentIndex < 0){
+currentIndex = cards.length - 1;
+}
+
+updateSlider();
+}
+
+
+const appearOnScroll = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+faders.forEach(el => appearOnScroll.observe(el));
+
+</script>
+</body>
+</html>

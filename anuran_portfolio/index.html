@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clark's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #03616d;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a.active, nav a:hover {
+            color: #77f2d3;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            background-color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #5eeedb;
+            padding-bottom: 0.5rem;
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            transition: box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background-color: #3498db;
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CLARK DEVON H. ANURAN</h1>
+        <p>Bachelor of Science in Information Technology | 2nd Year Student</p>
+    </header>
+
+    <nav>
+        <a href="?page=home" class="<?php echo $currentPage == 'home' ? 'active' : ''; ?>">Home</a>
+        <a href="?page=about" class="<?php echo $currentPage == 'about' ? 'active' : ''; ?>">About Me</a>
+        <a href="?page=projects" class="<?php echo $currentPage == 'projects' ? 'active' : ''; ?>">Projects</a>
+        <a href="?page=skills" class="<?php echo $currentPage == 'skills' ? 'active' : ''; ?>">Skills</a>
+        <a href="?page=contact" class="<?php echo $currentPage == 'contact' ? 'active' : ''; ?>">Contact</a>
+    </nav>
+
+    <div class="container">
+        <?php if ($currentPage == 'home'): ?>
+            <section class="section">
+                <h2>Welcome to My Portfolio</h2>
+                <p>Hi! I'm Clark – just a good student who want's to learn more about everything.</p>
+                <br>
+            </section>
+
+        <?php elseif ($currentPage == 'about'): ?>
+            <section class="section">
+                <h2>About Me</h2>
+                <p><strong>Age:</strong> 20 years old</p>
+                <p><strong>Education:</strong> Bachelor of Science in Information Technology (2nd Year)</p>
+                <p><strong>Location:</strong> Casiguran, Sorsogon</p>
+                <br>
+            </section>
+        <?php elseif ($currentPage == 'skills'): ?>
+            <section class="section">
+                <h2>My Skills</h2>
+
+                <h3>Skills</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Playing Valleyball</span>
+                    <span class="skill-tag">Good in socializing</span>
+                    <span class="skill-tag">Sporty person</span>
+                </div>
+
+                <h3>Soft Skills</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Teamwork</span>
+                    <span class="skill-tag">Research</span>
+                    <span class="skill-tag">Time Management</span>
+                </div>
+
+                <h3>Currently Learning</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Trying hard to learn coding</span>
+                </div>
+            </section>
+
+        <?php elseif ($currentPage == 'contact'): ?>
+            <section class="section">
+                <h2>Contact Me</h2>
+                <p><strong>Email:</strong> anuranclarkdevon9@gmail.com</p>
+                <p><strong>Location:</strong> Casiguran, Sorsogon</p>
+                <p><strong>Social:</strong> Connect with me on school IT organization groups!</p>
+                <br>
+            </section>
+        <?php endif; ?>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Clark Devon H. Anuran | BS Information Technology Student</p>
+    </footer>
+</body>
+</html>

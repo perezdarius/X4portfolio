@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Body */
+body {
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("Gubat_landscape.png") center / cover no-repeat;
+        background-size: cover;
+    margin: 0;
+    padding: 20px;
+    height: max-content;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.form-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #04274b;
+    font-size: 37px;
+}
+
+/* Fieldsets */
+.fieldset {
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.fieldset legend {
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* Fieldset Colors */
+.blue {
+    border-color: #8b2e12;
+}
+
+.purple {
+    border-color: #8b2e12;
+}
+
+.red {
+    border-color: #8b2e12;
+}
+
+.teal {
+    border-color: #8b2e12;
+}
+
+.orange {
+    border-color: #8b2e12;
+}
+
+.green {
+    border-color: #8b2e12;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs, Select, Textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2196f3;
+}
+
+/* Radio & Checkbox Groups */
+.radio-group,
+.check-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.radio-option,
+.check-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+}
+
+/* Section Note */
+.section-note {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Agreement */
+.agreement {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.btn-submit,
+.btn-reset {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-submit {
+    background-color: #2196f3;
+}
+
+.btn-submit:hover {
+    background-color: #1976d2;
+}
+
+.btn-reset {
+    background-color: #9e9e9e;
+}
+
+.btn-reset:hover {
+    background-color: #757575;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .radio-group,
+    .check-group {
+        flex-direction: column;
+    }
+}

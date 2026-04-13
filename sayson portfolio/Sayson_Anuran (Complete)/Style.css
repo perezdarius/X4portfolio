@@ -1,0 +1,40 @@
+
+body {
+background-color: #fcfeff;
+font-family: verdana;
+padding: 20px;
+color: white;
+}
+
+.header-box {
+background-color: #5fa8da;
+padding: 10px;
+margin-bottom: 20px;
+text-align: center;
+border-radius: 8px; space
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+
+.card {
+background-color: #7de0e7;
+padding: 20px;
+width: 30%;
+min-height: 300px;
+border: 1px solid #3a0900;
+box-sizing: border-box;
+border-radius: 8px;
+}
+
+ul, ol {
+text-align: left;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}

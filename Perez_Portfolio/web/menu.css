@@ -1,0 +1,74 @@
+body {
+    background-image: url('image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh; 
+}
+
+
+.hero-banner {
+    background-position: 80%;
+}
+
+.hero-content .overline1,
+.hero-content .hero-title,
+.hero-content .content-desc {
+    color: #FFFFFF;
+}
+
+.custom-navbar{
+background-color: #fff;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo{
+height: 80px;
+width:auto;
+border-radius:50%;
+}
+
+.brand-area{
+gap:15px;
+}
+
+.brand-item{
+font-size:24px;
+font-weight:bold;
+color:#a07c06;
+}
+
+.nav-link{
+font-weight:600;
+margin-left:15px;
+text-transform:uppercase;
+color:#6d560b !important;
+}
+
+.nav-link:hover{
+color:#a07c06 !important;
+
+}
+
+/* Base button style */
+.btn-join {
+    background-color: #6f4e37; /* dark coffee brown */
+    color: #fff; /* white text */
+    border: none;
+    transition: all 0.3s ease; /* smooth hover effect */
+}
+
+/* Hover effect */
+.btn-join:hover {
+    background-color: #8b5e3c; /* slightly lighter brown */
+    transform: translateY(-2px); /* subtle lift effect */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* soft shadow */
+}
+
+/* Optional: active/click effect */
+.btn-join:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+

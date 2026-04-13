@@ -1,0 +1,37 @@
+body {
+    background-image: url('image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh; 
+}
+              
+        .login-bg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-card {
+            background-color: #0c040454;
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid #c98c0a;
+            width: 100%;
+            max-width: 400px;
+        }
+        .btn-signin {
+            background-color: #ffffff;
+            color: #ffffff;
+            border: 1px solid #c98c0a;
+        }
+ 
+        .forgot-link {
+            font-size: 0.875rem;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .forgot-link:hover {
+            text-decoration: underline;
+        }

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1 class="form-title">Student Registration Form</h1>
+
+        <form action="#" method="POST">
+
+            <fieldset class="fieldset blue">
+                <legend>Personal Information</legend>
+
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+            </fieldset>
+
+            <fieldset class="fieldset purple">
+                <legend>Academic Information</legend>
+
+                <label for="studentId">Student ID:</label>
+                <input type="number" id="studentId" name="studentId" required>
+
+                <label for="enrollmentDate">Enrollment Date:</label>
+                <input type="date" id="enrollmentDate" name="enrollmentDate">
+            </fieldset>
+
+            <!--Addition-->
+            <fieldset class="fieldset red">
+                <legend>Social Status</legend>
+
+                <label for="social">Current Status:</label>
+                <select id="social" name="social" required>
+                    <option value="">-- Select a Status --</option>
+                    <option value="cs">Single</option>
+                    <option value="it">Married</option>
+                    <option value="engineering">Widow</option>
+                    <option value="business">Divorce</option>
+                </select>
+            </fieldset>
+            <!--Addition-->
+
+
+            <fieldset class="fieldset red">
+                <legend>Gender</legend>
+
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="gender" value="male">
+                        <span>Male</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="gender" value="female">
+                        <span>Female</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="gender" value="other">
+                        <span>Other</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset class="fieldset teal">
+                <legend>Course Selection</legend>
+
+                <label for="program">Choose Your Program:</label>
+                <select id="program" name="program" required>
+                    <option value="">-- Select a Program --</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="it">Information Technology</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="business">Business Administration</option>
+                    <option value="arts">Arts and Design</option>
+                </select>
+
+                <label for="yearLevel">Year Level:</label>
+                <select id="yearLevel" name="yearLevel" required>
+                    <option value="">-- Select Year Level --</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="fieldset orange">
+                <legend>Areas of Interest</legend>
+                <p class="section-note">Select all that apply:</p>
+
+                <div class="check-group">
+                    <label class="check-option">
+                        <input type="checkbox" name="interests" value="webDev">
+                        <span>Web Development</span>
+                    </label>
+
+                    <label class="check-option">
+                        <input type="checkbox" name="interests" value="mobileDev">
+                        <span>Mobile Development</span>
+                    </label>
+
+                    <label class="check-option">
+                        <input type="checkbox" name="interests" value="dataScience">
+                        <span>Data Science</span>
+                    </label>
+
+                    <label class="check-option">
+                        <input type="checkbox" name="interests" value="cybersecurity">
+                        <span>Cybersecurity</span>
+                    </label>
+
+                    <label class="check-option">
+                        <input type="checkbox" name="interests" value="ai">
+                        <span>Artificial Intelligence</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <!--Addition-->
+            <fieldset class="fieldset red">
+                <legend>Religion</legend>
+
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="religion" value="Roman Catholic">
+                        <span>Roman Catholic</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="religion" value="Iglesia ni Cristo">
+                        <span>Iglesia ni Cristo</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="religion" value="Born Again">
+                        <span>Born Again</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="religion" value="Atheist">
+                        <span>Atheist</span>
+                    </label>
+                </div>
+            </fieldset>
+            <!--Addition-->
+            
+            <fieldset class="fieldset green">
+                <legend>Additional Information</legend>
+
+                <label for="address">Complete Address:</label>
+                <textarea id="address" name="address" rows="3"></textarea>
+
+                <label for="comments">Comments or Special Requests:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </fieldset>
+
+            <div class="agreement">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" class="btn-submit">Submit Registration</button>
+                <button type="reset" class="btn-reset">Reset Form</button>
+            </div>
+
+        </form>
+    </div>
+
+    </body>
+</html>
